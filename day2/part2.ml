@@ -30,6 +30,6 @@ let rec invalid_ranges_sum (first, last) =
     if is_invalid str then first + invalid_ranges_sum (first + 1, last)
     else invalid_ranges_sum (first + 1, last)
 
-let result = List.fold_left ( + ) 0 (List.map invalid_ranges_sum ranges)
+let result = List.fold_left ( fun acc a -> acc + invalid_ranges_sum a ) 0  ranges
 let _ = print_endline (string_of_int result)
 let _ = close_in file
