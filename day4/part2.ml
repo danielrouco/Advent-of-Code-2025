@@ -41,3 +41,4 @@ let rec rolls () =
   if !n = 0 then 0 else !n + rolls ()
 
 let _ = print_endline (string_of_int (rolls ()))
+let _ = close_in file

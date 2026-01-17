@@ -38,3 +38,4 @@ let result =
   !n
 
 let _ = print_endline (string_of_int result)
+let _ = close_in file

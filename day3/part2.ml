@@ -37,3 +37,4 @@ let max_power l =
 
 let result = List.fold_left (fun acc a -> acc + max_power a) 0 banks
 let _ = print_endline (string_of_int result)
+let _ = close_in file
